@@ -9,8 +9,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
+class _HomePageState extends State<HomePage> {
   List<Color> colors = [
     Colors.blue,
     Colors.red,
@@ -24,11 +23,8 @@ class _HomePageState extends State<HomePage>
 
   bool status;
 
-  AnimationController _lottieController;
-
   @override
   void initState() {
-    _lottieController = AnimationController(vsync: this);
     super.initState();
   }
 
@@ -56,7 +52,6 @@ class _HomePageState extends State<HomePage>
               repeat: status,
               reverse: status,
               animate: status,
-              controller: _lottieController,
             ),
           ),
           Flexible(
@@ -88,10 +83,6 @@ class _HomePageState extends State<HomePage>
         shrinkWrap: true,
         scrollDirection: Axis.horizontal,
       ),
-      // child: BarWidget(
-      //   color: Colors.red,
-      //   duration: 1,
-      // ),
     );
   }
 }
