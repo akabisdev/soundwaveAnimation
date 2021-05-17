@@ -30,7 +30,7 @@ class _BarWidgetState extends State<BarWidget>
         duration: Duration(milliseconds: widget.duration), vsync: this);
     final curvedAnimation = CurvedAnimation(
         parent: animationController, curve: Curves.easeInOutSine);
-    animation = Tween<double>(begin: 10, end: 100).animate(curvedAnimation)
+    animation = Tween<double>(begin: 10, end: 56).animate(curvedAnimation)
       ..addListener(() {
         setState(() {});
       });
@@ -54,7 +54,14 @@ class _BarWidgetState extends State<BarWidget>
           width: 10,
           decoration: BoxDecoration(
               shape: BoxShape.rectangle,
-              color: widget.color,
+              // color: widget.color,
+              gradient: LinearGradient(
+                  begin: FractionalOffset(0, 0),
+                  end: FractionalOffset(1, 1),
+                  colors: [
+                    Color(0xff2AF598),
+                    Color(0xff009EFD),
+                  ]),
               borderRadius: BorderRadius.circular(4)),
         ),
       ),

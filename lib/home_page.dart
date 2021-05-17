@@ -16,10 +16,11 @@ class _HomePageState extends State<HomePage> {
     Colors.green,
     Colors.blue,
     Colors.red,
-    Colors.green
+    Colors.green,
+    Colors.blue
   ];
-  List<int> durations = [600, 700, 800, 600, 700, 800];
-  List<double> heights = [50, 75, 60, 30, 25, 80];
+  List<int> durations = [200, 300, 400, 200, 300, 400, 200];
+  List<double> heights = [18, 36, 56, 18, 36, 56, 18];
 
   bool status;
 
